@@ -1,0 +1,20 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+       int i;//数组前面的数的下标
+       int j;//数组后面的数的下标
+       int length=nums.size();//数组长度
+       vector<int> a(2);//自定义的数组，返回下标
+       int flag=1;//标志
+       for(i=0;flag&&i<length;i++){
+           for(j=i+1;flag&&j<length;j++){
+               if(nums[i]+nums[j]==target){
+                   a[0]=i;
+                   a[1]=j;
+                   flag=0;
+               }
+           }
+       } 
+       return a;
+    }
+};
